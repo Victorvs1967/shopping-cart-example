@@ -1,0 +1,9 @@
+<nav>
+  <mat-toolbar>
+    <span class="brand" (click)="reloadPage()">The Store</span>
+    <span class="spacer"></span>
+    <button mat-icon-button>
+      <mat-icon matBadge="{{ count$ | async }}" matBadgeColor="warn">shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
+</nav>

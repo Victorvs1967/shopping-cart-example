@@ -1,0 +1,27 @@
+<div class="goods">
+  <mat-card class="item" *ngFor="let item of (item$ | async)">
+    <img mat-card-img class="item-image" src="https://via.placeholder.com/175" alt="sample image" />
+    <mat-card-content>
+      <h5 class="item-title">{{ item.sku.title }}</h5>
+      <!-- <mat-form-field>
+        <mat-label>In Stock</mat-label>
+        <mat-select (change)="updateQuantity($event, item)">
+          <mat-option selected value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+          <mat-option value="3">3</mat-option>
+        </mat-select>
+      </mat-form-field> -->
+      <p class="text-success"><small>In Stock</small></p>
+      <select class="select" (change)="updateQuantity($event, item)">
+        <option selected value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <button mat-icon-button class="delete-btn" color="primary" (click)="deleteItem(item)"><mat-icon>delete</mat-icon></button>
+    </mat-card-content>
+    <h3 class="price">{{ item.sku.price | currency:'USD':'symbol':'.2' }}</h3>
+  </mat-card>
+  <mat-card *ngIf="(item$ | async)?.length === 0">
+    <h2>Your shopping cart is empty.</h2>
+  </mat-card>
+</div>

@@ -1,0 +1,35 @@
+.goods {
+  width: 100%;
+}
+.item {
+  height: 12em;
+  margin-bottom: 1rem;
+  display: flex;
+}
+.item-image {
+  margin-right: 1rem;
+  border-radius: .5rem;
+
+}
+.item-title {
+  max-width: 90%;
+  font-size: 1rem;
+}
+.price {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.delete-btn {
+  margin-left: auto;
+}
+.text-success {
+  margin: 0;
+  padding: 0;
+  color: #0000a0;
+}
+.select {
+  width: 150px;
+  font-size: 32px;
+  text-align: right;
+}

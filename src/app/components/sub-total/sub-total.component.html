@@ -1,0 +1,4 @@
+<div class="checkout">
+  <span class="subtotal">Subtotal (<strong>{{ (count$ | async) }}</strong> items): <strong>{{ (subTotal$ | async) | currency:'USD':'symbol':'.2' }}</strong></span>
+  <button mat-raised-button color="warn" [disabled]="(count$ | async) === 0" (click)="bayItems()">Proceed to Checkout</button>
+</div>
